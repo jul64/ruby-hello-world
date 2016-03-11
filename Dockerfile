@@ -1,6 +1,7 @@
 FROM centos/ruby-22-centos7
 USER default
 EXPOSE 8080
+ENV https_proxy=https://172.16.0.29:8080
 ENV RACK_ENV production
 ENV RAILS_ENV production
 COPY . /opt/app-root/src/
